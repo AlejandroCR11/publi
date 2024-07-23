@@ -48,23 +48,39 @@
             padding: 35px;
             border-radius: 10px;
         }
+        
+        #username,
+        #password {
+        width: 90vw;
+        height: 5vh;
+    }
+        
     </style>
+</head>     
+        
+
+    <title>Inicio de Sesión</title>
+<body>
+    <!-- Iniciar seccion -->
+    
+    <link rel="stylesheet" href="styles.css">
+    <title>Inicio de Sesión</title>
+    <script type="text/javascript">
+        function iniciarSesion () {
+            window.location.href = "Principal.html";
+        }
+    </script>
 </head>
 <body>
-    <div class="form-container">
+    <div class="login-container">
         <h1>Iniciar Sesión</h1>
-        <!-- en proncipal.html va donde se procesa el login -->
-        <form action="Principal.html" method="POST">
-            <label for="username">Usuario:</label>
-            <input type="text" id="username" name="username" required>
-            <br>
-            <label for="password">Contraseña:</label>
-            <input type="password" id="password" name="password" required>
-            <br>
-            <input type="submit" value="Iniciar Sesión">
-        </form>
-       
+        <input type="text" id="username" placeholder="Usuario" required>
+        <input type="password" id="password" placeholder="Contraseña" required>
+        <button onclick="iniciarSesion()">Iniciar Sesión</button>
     </div>
+
+    <script src="main.js"></script>
+
     <!-- Botón para abrir la ventana modal -->
     <button onclick="abrirModal()">Regístrate</button>
 
@@ -72,8 +88,8 @@
     <div id="miModal" class="modal">
         <div class="modal-content">
             <h1>Registro</h1>
-             <!-- el proceso de registro -->
-            <!--<form action="procesar_registro.php" method="POST">-->
+             <!-- registro -->
+            <!-- <form action="procesar_registro.php" method="POST">-->
                 <label for="newUsername">Nuevo Usuario:</label>
                 <input type="text" id="newUsername" name="newUsername" required>
                 <br>
