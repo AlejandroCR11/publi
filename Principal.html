@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juegos Online</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0f7fa;
+            color: #0277bd;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #01579b;
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        nav {
+            margin: 20px 0;
+            text-align: center;
+        }
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+        .game-card {
+            background-color: #ffffff;
+            border: 2px solid #0277bd;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: inline-block;
+            margin: 10px;
+            padding: 10px;
+            width: 250px;
+        }
+        .game-card img {
+            width: 100%;
+            height: auto;
+            border-bottom: 2px solid #0277bd;
+        }
+        .game-card h3 {
+            margin: 10px 0;
+            color: #01579b;
+            
+        }
+        footer {
+            background-color: #01579b;
+            color: #ffffff;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            
+        .advertisement {
+            width: 300px;
+            height: 250px;
+            border: 2px solid #ccc;
+            cursor: pointer;
+        }
+        .advertisement img {
+            width: 100%;
+            height: 100%;
+        }
+            
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Bienvenido a Juegos Online</h1>
+        <nav>
+            <a href="#">Inicio</a>
+            <a href="#">Juegos</a>
+            <a href="#">Tendencias</a>
+            <a href="#">Contacto</a>
+        </nav>
+    </header>
+    
+
+    <div class="content">
+        <h2>Los Mejores Juegos</h2>
+        <div class="game-card">
+            <img src="https://via.placeholder.com/250x150?text=Juego+1" alt="Juego 1">
+            <h3>Juego 1</h3>
+            <p>Una breve descripción del juego 1.</p>
+            <a href="#">Jugar</a>
+        </div>
+        <div class="game-card">
+            <img src="https://via.placeholder.com/250x150?text=Juego+2" alt="Juego 2">
+            <h3>Juego 2</h3>
+            <p>Una breve descripción del juego 2.</p>
+            <a href="#">Jugar</a>
+        </div>
+        <div class="game-card">
+            <img src="https://via.placeholder.com/250x150?text=Juego+3" alt="Juego 3">
+            <h3>Juego 3</h3>
+            <p>Una breve descripción del juego 3.</p>
+            <a href="#">Jugar</a>
+        </div>
+    </div>
+
+    <aside class="ad">
+        <h2>Publicidad</h2>
+        <p>veces vista la publicidad: <span id="clickCount">0</span></p>
+        <div class="advertisement" onclick="handleAdClick()">
+        <img src="colgate.jpeg" alt="Publicidad" width="300" height="150">
+        <p><a href="#">Más info</a></p>
+    </div>
+    </aside>
+    <span id="clickCount">0</span>
+    <script>
+        // Inicializar contador de clics desde localStorage
+        let clickCount = localStorage.getItem('adClickCount') ? parseInt(localStorage.getItem('adClickCount')) : 0;
+        document.getElementById('clickCount').textContent = clickCount;
+
+        function handleAdClick() {
+            // Incrementar contador
+            clickCount++;
+            // Actualizar el contador en el DOM
+            document.getElementById('clickCount').textContent = clickCount;
+            // Almacenar el contador actualizado en localStorage
+            localStorage.setItem('adClickCount', clickCount);
+            // Redirigir a la página deseada
+            window.open('Anuncio.html', '_blank');
+            
+                    
+            
+        }
+    </script>
+</div>
+
+    <footer>
+        <p>&copy; 2024 Juegos Online. Todos los derechos reservados a mi :v.</p>
+    </footer>
+</body>
+</html>
